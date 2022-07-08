@@ -1,4 +1,4 @@
-name: Scan for SEO and Accessibility Issues
+name: Scan for SEO, Accessibility, Performance
 on: 
   pull_request:
     branches: ["main"]
