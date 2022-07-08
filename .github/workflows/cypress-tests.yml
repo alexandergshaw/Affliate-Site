@@ -1,7 +1,7 @@
 name: Run Cypress Tests
 on: [pull_request]
 jobs:
-  cypress-run:
+  chrome_e2e:
     runs-on: ubuntu-20.04
     # let's make sure our tests pass on Chrome browser
     name: E2E on Chrome
@@ -10,3 +10,22 @@ jobs:
       - uses: cypress-io/github-action@v4
         with:
           browser: chrome
+  firefox_e2e:
+    runs-on: ubuntu-latest
+    name: E2E on Firefox
+    container:
+      image: cypress/browsers:node12.16.1-chrome80-ff73
+      options: --user 1001
+    steps:
+      - uses: actions/checkout@v2
+      - uses: cypress-io/github-action@v4
+        with:
+          browser: firefox
+  edge_e2e:
+    runs-on: windows-latest
+    name: E2E on Edge
+    steps:
+      - uses: actions/checkout@v2
+      - uses: cypress-io/github-action@v4
+        with:
+          browser: edge
