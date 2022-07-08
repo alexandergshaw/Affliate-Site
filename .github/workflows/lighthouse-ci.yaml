@@ -1,4 +1,4 @@
-name: Scan for SEO, Accessibility, Performance
+name: Score SEO, Accessibility, Performance, Best Practices
 on: 
   pull_request:
     branches: ["main"]

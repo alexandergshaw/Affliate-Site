@@ -1,10 +1,12 @@
 module.exports = {
   ci: {
     collect: {
-      staticDistDir: "./out",
-      url: [
-        "https://alexshaw-static-website.s3.us-east-2.amazonaws.com/index.html",
-      ],
+      startServerCommand: "npm run start",
+      url: ["http://localhost:3000/"],
+      startServerReadyPattern:
+        "started server on 0.0.0.0:3000, url: http://localhost:3000",
+      startServerReadyTimeout: 20000, // milliseconds
+      numberOfRuns: 5,
     },
     upload: {
       target: "temporary-public-storage",
