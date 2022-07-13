@@ -2,6 +2,7 @@ module.exports = {
   ci: {
     collect: {
       startServerCommand: "npm start",
+      staticDistDir: "./out"
     },
     upload: {
       target: "temporary-public-storage",
