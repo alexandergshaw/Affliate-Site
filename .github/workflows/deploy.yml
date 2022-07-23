@@ -7,6 +7,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: 
+      name: production
+      url: https://alexshaw-static-website.s3.us-east-2.amazonaws.com/index.html
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
